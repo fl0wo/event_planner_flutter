@@ -4,6 +4,8 @@ import 'dart:math';
 Random random = new Random();
 
 const distanza_top = 250.0;
+const margine_verticale = 2.0;
+const margine_orrizontale = 0.0;
 
 const width_block = 100.0;
 const height_block = 50.0;
@@ -48,14 +50,16 @@ class WeekView extends StatelessWidget {
 
   Widget _buildRect(int i, int l) {
     return Positioned(
-      left: 25.0 + random.nextInt(50),
-      width: width_block + random.nextInt(50) - random.nextInt(50),
+      left: 0,
+      right: 0,
+      // width: width_block + random.nextInt(50),
       top: distanza_top +
           (height_block * i) -
-          (height_block * l / 2.000), //+ height_block * d,
+          (height_block * l / 2.0) -
+          (margine_verticale / 2.0 * l) / 2.0,
       height: height_block,
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: 2.0),
+        margin: EdgeInsets.symmetric(vertical: margine_verticale),
         color: Colors.deepPurpleAccent,
       ),
     );
