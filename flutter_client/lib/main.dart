@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:circular_bottom_navigation/circular_bottom_navigation.dart';
 import 'package:flutter/services.dart';
 
+import 'widgets/profile/pages/home_page.dart';
 import 'widgets/timeline.dart';
 
 void main() => runApp(MyApp());
@@ -75,11 +76,9 @@ class _MyHomePageState extends State<MyHomePage> {
     String slogan;
     switch (selectedPos) {
       case 0:
-        slogan = "Me";
-        break;
+        return Scaffold(body: HomePage());
       case 1:
         return Scaffold(body: WeekView());
-        break;
       case 2:
         slogan = "My Events";
         break;
