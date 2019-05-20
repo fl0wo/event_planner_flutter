@@ -1,6 +1,7 @@
 import 'package:circular_bottom_navigation/tab_item.dart';
 import 'package:flutter/material.dart';
 import 'package:circular_bottom_navigation/circular_bottom_navigation.dart';
+import 'package:flutter/services.dart';
 
 import 'widgets/timeline.dart';
 
@@ -52,6 +53,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return Scaffold(
       body: Stack(
         children: <Widget>[
