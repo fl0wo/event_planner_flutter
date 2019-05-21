@@ -1,3 +1,4 @@
+import 'package:EventIt/widgets/auth/login_face.dart';
 import 'package:circular_bottom_navigation/tab_item.dart';
 import 'package:flutter/material.dart';
 import 'package:circular_bottom_navigation/circular_bottom_navigation.dart';
@@ -6,7 +7,8 @@ import 'package:flutter/services.dart';
 import 'widgets/profile/pages/home_page.dart';
 import 'widgets/timeline.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(LoginFaceBefore());
+// after login
 
 class MyApp extends StatelessWidget {
   @override
